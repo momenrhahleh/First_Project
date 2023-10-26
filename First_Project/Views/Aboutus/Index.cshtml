@@ -1,0 +1,53 @@
+﻿@model IEnumerable<First_Project.Models.Aboutu>
+
+@{
+    ViewData["Title"] = "Index";
+        Layout= "HomeLayout";
+}
+
+<h1>Index</h1>
+
+@*<p>
+    <a asp-action="Create">Create New</a>
+</p>*@
+<table class="table-responsive  pt-3">
+    <thead>
+        <tr>
+            <th>
+                Image
+            </th>
+            <th>
+                Paragraphtext
+            </th>
+            <th>
+                Text
+            </th>
+            <th>
+                Userid
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    <img src="@Url.Content("~/Images/" + item.ImagePath)" asp-append-version="true" width="100" height="100" />
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Paragraphtext)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Text)
+                </td>
+               
+                <td>
+                    @*<a asp-action="Edit" asp-route-id="@item.Aboutusid">Edit</a> |*@
+                    <a asp-action="Details" asp-route-id="@item.Aboutusid">Details</a>@* |
+                    <a asp-action="Delete" asp-route-id="@item.Aboutusid">Delete</a>*@
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

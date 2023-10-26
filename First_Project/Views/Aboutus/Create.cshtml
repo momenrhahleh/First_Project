@@ -1,0 +1,119 @@
+﻿@model First_Project.Models.Aboutu
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "HomeLayout";
+}
+
+<!--================Home Banner Area =================-->
+<section class="banner_area">
+    <div class="banner_inner d-flex align-items-center">
+        <div class="container">
+            <div class="banner_content d-md-flex justify-content-between align-items-center">
+                <div class="mb-3 mb-md-0">
+                    <h2>About Us</h2>
+                    @*                    <p>Belding years moveth earth green behold wherein</p>
+                    *@
+                </div>
+                <div class="page_link">
+                    @*<a href="index.html">Home</a>
+                    <a href="contact.html">About Us</a>*@
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--================End Home Banner Area =================-->
+<!--================About  Area =================-->
+<section class="about-area">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-10 offset-md-1 col-lg-6 offset-lg-6 offset-xl-7 col-xl-5">
+                <div class="about-content">
+                    <h4>
+                        Medcare Insurance
+                   </h4>
+                    <p>Insurance is cooperation. This occurs when a community pools its reserve resources to assist its members when accidents occur. At Medcare Insurance, we are at the heart of this community.</p>
+                    <p>Our role is to regulate and manage the insurance needs of our members fairly and honestly. To find new ways to keep life in motion. To maintain workflow. To move forward. To prepare for what is coming. That's why Medcare Insurance exists.</p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--================About Area End =================-->
+<!--================ appointment Area Starts =================-->
+@*<section class="appointment-area area-padding-top">
+    <div class="container">
+
+        <div class="appointment-inner">
+            <div class="center">
+
+                <div class="col-lg-5">
+                    <div class="appointment-form">
+                        <h3>Make an Appointment</h3>
+                        <form action="#">
+                            <div class="form-group">
+                                <label>Full Name</label>
+                                <input type="text" placeholder="Your Name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your Name'" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Email</label>
+                                <input type="email" placeholder="Your Email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your Email'" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Message</label>
+                                <textarea name="message" cols="20" rows="7" placeholder="Message" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Message'" required></textarea>
+                            </div>
+                            <a href="#" class="main_btn">Make an Appointment</a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+</section>*@
+<!--================ appointment Area End =================-->
+@*<h1>Create</h1>
+
+<h4>Aboutu</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="ImageFile" class="control-label"></label>
+                <input asp-for="ImageFile" class="form-control" />
+                <span asp-validation-for="ImageFile" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Paragraphtext" class="control-label"></label>
+                <input asp-for="Paragraphtext" class="form-control" />
+                <span asp-validation-for="Paragraphtext" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Text" class="control-label"></label>
+                <input asp-for="Text" class="form-control" />
+                <span asp-validation-for="Text" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Userid" class="control-label"></label>
+                <input asp-for="Userid" class="form-control" />
+                <span asp-validation-for="Userid" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>*@
+
+

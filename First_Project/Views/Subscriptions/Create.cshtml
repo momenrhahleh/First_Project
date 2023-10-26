@@ -1,0 +1,116 @@
+﻿@model First_Project.Models.Subscription
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "HomeLayout";
+}
+
+
+
+<!--================Home Banner Area =================-->
+<section class="banner_area">
+    <div class="banner_inner d-flex align-items-center">
+        <div class="container">
+            <div class="banner_content d-md-flex justify-content-between align-items-center">
+                <div class="mb-3 mb-md-0">
+                    <h2>Subscription</h2>
+                    
+                </div>
+                <div class="page_link">
+                  
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--================End Home Banner Area =================-->
+<!--================ appointment Area Starts =================-->
+<section class="appointment-area area-padding-top">
+    <div class="container">
+
+        <div class="appointment-inner">
+            <div class="center">
+
+                <div class="col-lg-5">
+                    <div class="appointment-form">
+                        <h3>Card information</h3>
+                        <form action="#">
+                            <div class="form-group">
+                                <label for="Card_Number">Card Number</label>
+                                <input type="text" name="Card_Number" id="Card_Number"  />
+                            </div>
+                            <div class="form-group">
+                                <label for="CVV">CVV</label>
+                                <input type="text" name="CVV " id="CVV" />
+                            </div>
+                            <div class="form-group">
+                                <label for="Expiration_Date">Expiration Date --/--</label>
+                                <input type="text" name="Expiration_Date " id="Expiration_Date" />
+                            </div>
+                            <div class="form-group">
+                                <label>Subscriptiondate</label>
+                                <input type="text" asp-for="Subscriptiondate" class="form-control" >
+                            </div>
+                            <div class="form-group">
+                                <label>Amount</label>
+                                <input type="text" asp-for="Amount" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label>Paymentstatus</label>
+                                <input type="text" asp-for="Paymentstatus" class="form-control">
+                            </div>
+
+                            <div class="form-group mt-3">
+                                <button type="submit" class="button button-contactForm">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+</section>
+
+
+
+@*<h1>Create</h1>
+
+<h4>Subscription</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Userid" class="control-label"></label>
+                <select asp-for="Userid" class ="form-control" asp-items="ViewBag.Userid"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="Subscriptiondate" class="control-label"></label>
+                <input asp-for="Subscriptiondate" class="form-control" />
+                <span asp-validation-for="Subscriptiondate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Amount" class="control-label"></label>
+                <input asp-for="Amount" class="form-control" />
+                <span asp-validation-for="Amount" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Paymentstatus" class="control-label"></label>
+                <input asp-for="Paymentstatus" class="form-control" />
+                <span asp-validation-for="Paymentstatus" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+*@

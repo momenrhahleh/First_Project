@@ -1,0 +1,105 @@
+﻿@model IEnumerable<First_Project.Models.Home>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "HomeLayout";
+}
+<!--================Home Banner Area =================-->
+
+<section class="banner-area d-flex align-items-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-lg-6 col-xl-5">
+                <h1>Making Health</h1>
+                <p>Your health insurance with us is your right choice.</p>
+                @*<a href="" class="main_btn">Make an Appointment</a>
+                <a href="" class="main_btn_light">View Department</a>*@
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--================End Home Banner Area =================-->
+<!--================ Feature section start =================-->
+<section class="feature-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card card-feature text-center text-lg-left">
+
+                    <h3 class="card-feature__title">
+                        <span class="card-feature__icon">
+                            <i class="ti-layers"></i>
+                        </span>Primary Care
+                    </h3>
+                    <p class="card-feature__subtitle">An so vulgar to on points wanted rapture ous resolving continued household </p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card card-feature text-center text-lg-left">
+
+                    <h3 class="card-feature__title">
+                        <span class="card-feature__icon">
+                            <i class="ti-heart-broken"></i>
+                        </span>Emergency Cases
+                    </h3>
+                    <p class="card-feature__subtitle">An so vulgar to on points wanted rapture ous resolving continued household </p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card card-feature text-center text-lg-left">
+
+                    <h3 class="card-feature__title">
+                        <span class="card-feature__icon">
+                            <i class="ti-headphone-alt"></i>
+                        </span>Online Appointment
+                    </h3>
+                    <p class="card-feature__subtitle">An so vulgar to on points wanted rapture ous resolving continued household </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--================ Feature section end =================-->
+@*<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table-responsive  pt-3">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ImagePath)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Text)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Userid)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+            <img src="@Url.Content("~/Images/" + item.ImagePath)" asp-append-version="true" width="100" height="100" />
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Text)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Userid)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Homeid">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Homeid">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Homeid">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+*@

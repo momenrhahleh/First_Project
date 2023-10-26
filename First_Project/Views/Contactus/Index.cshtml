@@ -1,0 +1,107 @@
+﻿@model IEnumerable<First_Project.Models.Contactu>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "HomeLayout";
+}
+
+
+
+
+<!--================Home Banner Area =================-->
+<section class="banner_area">
+    <div class="banner_inner d-flex align-items-center">
+        <div class="container">
+            <div class="banner_content d-md-flex justify-content-between align-items-center">
+                <div class="mb-3 mb-md-0">
+                    <h2>Contact</h2>
+                    @*                    <p>Belding years moveth earth green behold wherein</p>
+                    *@
+                </div>
+                <div class="page_link">
+                    @*<a href="index.html">Home</a>
+                    <a href="contact.html">Contact</a>*@
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--================End Home Banner Area =================-->
+
+<div class="row">
+    <div class="col-12">
+        <h2 class="contact-title">Get in Touch</h2>
+    </div>
+    <div class="col-lg-4">
+        <div class="media contact-info">
+            <span class="contact-info__icon"><i class="ti-home"></i></span>
+            <div class="media-body">
+                <h3>Jordan-Amman</h3>
+
+            </div>
+        </div>
+        <div class="media contact-info">
+            <span class="contact-info__icon"><i class="ti-tablet"></i></span>
+            <div class="media-body">
+                <h3><a href="tel:0781514032">0781514032</a></h3>
+
+            </div>
+        </div>
+        <div class="media contact-info">
+            <span class="contact-info__icon"><i class="ti-email"></i></span>
+            <div class="media-body">
+                <h3><a href="mailto:Moamnrhahleh97@gmail.com">Moamnrhahleh97@gmail.com</a></h3>
+                <p>Send us your query anytime!</p>
+            </div>
+        </div>
+    </div>
+</div>
+@*<br>
+<br>
+<br>
+<br>
+<br>
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table-responsive  pt-3">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Message)
+            </th>
+            
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Message)
+            </td>
+           
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Contactusid">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Contactusid">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Contactusid">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+*@
